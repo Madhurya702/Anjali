@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Anjali</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 550px;
+      position: relative;
+    }
+
+    .card img {
+      width: 180px;
+      height: 220px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+      color: #d6336c;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .cat {
+      font-size: 2em;
+    }
+
+    .wish {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .fingerprint-container {
+      margin-top: 30px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .fingerprint-text {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #888;
+    }
+
+    .fingerprint {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      background: url('https://i.imgur.com/fn6QU8D.png') no-repeat center;
+      background-size: cover;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/6965" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio id="cheerSound">
+    <source src="https://www.fesliyanstudios.com/play-mp3/6416" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="card">
+    <img src="/mnt/data/file-J2LqLJVoHD8FJSvHeLmbRv" alt="Anjali's Photo" />
+    <h1>Happy Birthday Anjali!</h1>
+    <p>Wishing you a day filled with love, joy, and adorable cats!</p>
+    <div class="cat">Meow Meow!</div>
+    <div class="wish">
+      Happy Birthday, Anjali! On this special day, I just want you to know how lucky I am to have you. Your smile lights up my world, and your love for cats is just another reason you're the cutest. May your birthday be as beautiful and soft as your heart — and filled with love, laughter, and meowgical moments.<br><br>
+      <strong>Love you more than all the cats in the world!</strong>
+    </div>
+    <div class="fingerprint-container" onclick="triggerSurprise()">
+      <div class="fingerprint-text">Put your finger here</div>
+      <div class="fingerprint"></div>
+    </div>
+  </div>
+
+  <script>
+    function triggerSurprise() {
+      const sound = document.getElementById("cheerSound");
+      sound.play();
+      if (navigator.vibrate) {
+        navigator.vibrate([200, 100, 200]);
+      }
+    }
+  </script>
+</body>
+</html>
